@@ -22,13 +22,28 @@
     img.portrait { position: absolute; left: 1em; border: none; }
     ul, ol { padding-left: 1em; }
     tt { font-family: monospace; }
+    @font-face { font-family: 'hg_100regular';
+                 src: url(hg_100-webfont.eot); }
+    @font-face {
+      font-family: 'hg_100regular';
+      src: url(data:application/x-font-woff;charset=utf-8;base64,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) format('woff'),
+           url(hg_100-webfont.ttf) format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    h1 { font-family: 'hg_100regular', sans-serif;
+         font-size: 50px;
+         margin-left: -7px;
+         margin-top: -5px;
+         margin-bottom: 0; }
     </style>
   </head>
   <body>
     <a href="https://www.facebook.com/photo.php?fbid=2321447915486&amp;l=cc1d9b58e6"
     ><img src="http://i.imgur.com/fFkjM.jpg" class="portrait" alt=""></a>
-    <h1 id="me">&#27946;&#27665;&#24985;</h1>
-    <p>My name is Hong Minhee. I&rsquo;m basically an open source programmer
+    <h1 id="me">&#54861;&#48124;&#55148;</h1>
+    <p>My name is Hong Minhee (&#27946;&#27665;&#24985;). I&rsquo;m basically
+    an open source programmer
     in Seoul and hobbyist programming language designer/implementer.
     My big interests include concurrency, asynchronous programming,
     programming language design, and web programming.
