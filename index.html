@@ -46,6 +46,10 @@
          margin-left: -7px;
          margin-top: -5px;
          margin-bottom: 0; }
+    li.etc:after { transition: opacity 1s; content: 'see more?'; opacity: 0.5; }
+    li.etc ul { transition: opacity 0.3s, height 1s; height: 0; opacity: 0; }
+    li.etc:hover:after, li.etc:active:after { opacity: 0; }
+    li.etc:hover ul, li.etc:active ul { height: auto; opacity: 1; }
     </style>
   </head>
   <body>
@@ -104,27 +108,55 @@
       <li><a href="https://github.com/spoqa/geofront">Geofront</a> and
       <a href="https://github.com/spoqa/geofront-cli">geofront-cli</a> are
       a simple SSH key management service and its client utility.</li>
-      <li><a href="http://sider.dahlia.kr/">Sider</a> is a Python persistent
-      object library using Redis.</li>
-      <li><a href="https://github.com/dahlia/lisphp">Lisphp</a> is a Lisp
-      dialect written in PHP.</li>
-      <li><a href="http://dahlia.kr/libsass-python/">libsass</a> is a SASS/SCSS
-      package for Python.</li>
-      <li><a href="http://pythonhosted.org/sphinxcontrib-httpdomain/"
+      <li><a href="http://dahlia.kr/libsass-python/">libsass-python</a> is
+      a SASS/SCSS package for Python.</li>
+      <li><a href="https://pythonhosted.org/sphinxcontrib-httpdomain/"
       >sphinxcontrib-httpdomain</a> is a Sphinx domain for describing HTTP
       APIs.</li>
       <li><a href="https://sqlalchemy-imageattach.readthedocs.org/"
       >SQLAlchemy-ImageAttach</a> is a SQLAlchemy extension for attaching
       images to entity objects.</li>
-      <li><a href="https://github.com/crosspop/okydoky">Okydoky</a> is an
-      automated docs builder using Sphinx/GitHub/Distribute for use with
-      private projects.</li>
-      <li><a href="http://dahlia.bitbucket.org/futureutils/">futureutils</a>
-      is a Python module that introduces <a
-      href="http://en.wikipedia.org/wiki/Futures_and_promises">future and
-      promises</a> into iterators and generators.</li>
-      <li><a href="https://bitbucket.org/dahlia/typequery">TypeQuery</a>
-      is a Python library to define generic methods to existing types</li>
+      <li><a href="https://github.com/dahlia/muzei-pixiv">Pixiv for Muzei</a>
+      is a <a href="http://www.muzei.co/">Muzei</a> extension sourcing
+      artworks of <a href="http://www.pixiv.com/">Pixiv</a>.</li>
+      <li><a href="https://pythonhosted.org/sphinxcontrib-autoprogram/"
+      >sphinxcontrib-autoprogram</a> is a Sphinx extension for documenting
+      CLI programs in automated way.</li>
+      <li class="etc">Et cetera:
+        <ul>
+          <li><a href="http://sider.dahlia.kr/">Sider</a> is a Python persistent
+          object library using Redis.</li>
+          <li><a href="https://github.com/crosspop/okydoky">Okydoky</a> is an
+          automated docs builder using Sphinx/GitHub/Distribute for use with
+          private projects.</li>
+          <li><a href="https://bitbucket.org/dahlia/typequery">TypeQuery</a>
+          is a Python library to define generic methods to existing types</li>
+          <li><a href="https://bitbucket.org/dahlia/niconico-translator"
+          >niconico-translator</a> is a comment translator of
+          <a href="http://www.nicovideo.jp/">Nico Nico Douga
+          (ニコニコ動画)</a>.</li>
+          <li lang="ko"><a href="https://bitbucket.org/dahlia/navercomicfeed"
+          >NaverComicFeed</a>는 <a href="http://comic.naver.com/">네이버
+          만화</a>를 위한 비공식 RSS 서비스입니다.</li>
+          <li><a href="https://bitbucket.org/dahlia/wsgi-proxy">wsgi-proxy</a>
+          is a simple WSGI app that does HTTP 1.0 proxy.</li>
+          <li><a href="http://irclog.rtfd.org/">irclog</a> is a web IRC log
+          viewer.</li>
+          <li><a href="https://github.com/dahlia/lisphp">Lisphp</a> is a Lisp
+          dialect written in PHP.</li>
+          <li><a href="https://github.com/dahlia/encodingcontext"
+          >encodingcontext</a> is a small module that implements a bad idea,
+          making default encoding explicitly scoped.</li>
+          <li><a href="http://dahlia.bitbucket.org/futureutils/">futureutils</a>
+          is a Python module that introduces <a
+          href="http://en.wikipedia.org/wiki/Futures_and_promises">future and
+          promises</a> into iterators and generators.</li>
+          <li><a href="http://lunant.github.io/SQLAlchemy-Future/"
+          >SQLAlchemy-Future</a> is a SQLAlchemy extension that introduces <a
+          href="http://en.wikipedia.org/wiki/Futures_and_promises">future and
+          promises</a> into query.</li>
+        </ul>
+      </li>
     </ul>
     <p>You also can see my other activities about open source hacking at my
     <a href="https://github.com/dahlia" rel="me">GitHub</a>,
