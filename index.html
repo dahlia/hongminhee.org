@@ -46,10 +46,8 @@
          margin-left: -7px;
          margin-top: -5px;
          margin-bottom: 0; }
-    li.etc:after { transition: opacity 1s; content: 'see more?'; opacity: 0.5; }
-    li.etc ul { transition: opacity 0.3s, height 1s; height: 0; opacity: 0; }
-    li.etc:hover:after, li.etc:active:after { opacity: 0; }
-    li.etc:hover ul, li.etc:active ul { height: auto; opacity: 1; }
+    .toggler { color: inherit; opacity: 0.5; cursor: pointer; }
+    .etc .hidden { display: none; }
     </style>
   </head>
   <body>
@@ -157,6 +155,31 @@
           href="http://en.wikipedia.org/wiki/Futures_and_promises">future and
           promises</a> into query.</li>
         </ul>
+        <script>
+        // <![CDATA[
+        var projects = document.getElementsByClassName('etc')[0],
+            etc = projects.getElementsByTagName('ul')[0],
+            toggler = document.createElement('span');
+        function showEtc() {
+          toggler.firstChild.nodeValue = 'hide\u2026';
+          etc.className = etc.className.replace(/\bhidden\b/g, ' ');
+          toggler.onclick = hideEtc;
+          return false;
+        }
+        function hideEtc() {
+          while (toggler.childNodes.length) {
+            toggler.removeChild(toggler.firstChild);
+          }
+          toggler.appendChild(document.createTextNode('see more?'));
+          etc.className += ' hidden';
+          toggler.onclick = showEtc;
+          return false;
+        }
+        toggler.className = 'toggler';
+        hideEtc();
+        projects.insertBefore(toggler, etc);
+        // ]]>
+        </script>
       </li>
     </ul>
     <p>You also can see my other activities about open source hacking at my
