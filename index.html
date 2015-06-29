@@ -34,9 +34,13 @@
          margin-top: -5px;
          margin-bottom: 0; }
     h1 ruby { font: inherit; }
-    h1 rt, h1 rp { display: inline; font-family: sans-serif;
-                   font-size: 40px; font-weight: 200;
-                   opacity: 0; transition: opacity 0.5s; }
+    h1 rt, h1 rp {
+      display: inline;
+      font-family: 'Noto Sans CJK KR', 'Noto Sans CJK TC', 'Noto Sans CJK JP',
+                   'Noto Sans CJK SC', sans-serif;
+      font-size: 40px; font-weight: 100;
+      opacity: 0; transition: opacity 0.5s;
+    }
     h1:hover rt, h1:hover rp { opacity: 0.25; }
     a[lang]:after {
       color: gray;
