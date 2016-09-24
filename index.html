@@ -26,10 +26,13 @@
     body.portrait-random { margin-left: 219px; }
     h2 { font-weight: normal; margin-top: 1.2em; }
     img#portrait { position: absolute; left: 1em; border: none; }
-    ul, ol { padding-left: 0; margin-left: -0.5em; }
-    ul li { list-style-type: '\ff65'; padding-left: 0.5em; }
-    li ul, li ol { margin-left: 0.5em; }
-    li ul li { list-style-type: '\fe58'; }
+    ol { padding-left: 0; margin-left: -0.5em; }
+    ul { padding-left: 0; margin-left: -1em; }
+    ul li { list-style-type: none; padding-left: 1em; }
+    ul li:before { content: '\ff65'; margin-left: -1em; padding-right: 0.5em; }
+    li ul, li ol { margin-left: 0; padding-left: 0; }
+    li ul li { list-style-type: none; }
+    li ul li:before { content: '\fe58'; margin-left: -0.875em; }
     tt { font-family: monospace; }
     pre a { font-family: monospace; color: inherit; text-decoration: inherit; }
     .id { font-family: monospace; }
