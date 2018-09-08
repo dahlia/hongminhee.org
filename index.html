@@ -26,13 +26,16 @@
     body.portrait-random { margin-left: 219px; }
     h2 { font-weight: normal; margin-top: 1.2em; }
     img#portrait { position: absolute; left: 1em; border: none; }
-    ol { padding-left: 0; margin-left: -0.5em; }
     ul { padding-left: 0; margin-left: -1em; }
     ul li { list-style-type: none; padding-left: 1em; }
     ul li:before { content: '\ff65'; margin-left: -1em; padding-right: 0.5em; }
     li ul, li ol { margin-left: 0; padding-left: 0; }
     li ul li { list-style-type: none; }
-    li ul li:before { content: '\fe58'; margin-left: -0.875em; }
+    li ul li:before { content: '\fe58'; padding-right: 0; }
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      /* Blink/WebKit */
+      li ul li:before { content: '\fe58'; padding-right: 0.5em; }
+    }
     tt { font-family: monospace; }
     pre a { font-family: monospace; color: inherit; text-decoration: inherit; }
     .id { font-family: monospace; }
@@ -163,31 +166,37 @@ href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90:Hongminhee"
     >7EED</span><span>6CCA</span></a></pre>
     <h2 id="projects">Open Source</h2>
     <ul>
-      <li><a href="http://wand-py.org/">Wand</a> is a <a
-      href="https://docs.python.org/3/library/ctypes.html"><code
-      >ctypes</code></a>-based simple <a href="https://www.imagemagick.org/"
-      >ImageMagick API</a> binding for Python.</li>
-      <li><a href="https://github.com/spoqa/nirum">Nirum</a> is an IDL compiler
+      <li><a href="https://nirum.org/">Nirum</a> is an IDL compiler
       and RPC/distributed object framework for microservices.</li>
       <li><a href="https://github.com/spoqa/geofront">Geofront</a> and
       <a href="https://github.com/spoqa/geofront-cli">geofront-cli</a> are
       a simple SSH key management service and its client utility.</li>
       <li><a href="https://sass.github.io/libsass-python/">libsass-python</a> is
       a SASS/SCSS package for Python.</li>
-      <li><a href="https://sphinxcontrib-httpdomain.readthedocs.io/"
+      <li><a href="http://wand-py.org/">Wand</a> is a <a
+      href="https://docs.python.org/3/library/ctypes.html"><code
+      >ctypes</code></a>-based simple <a href="https://www.imagemagick.org/"
+      >ImageMagick API</a> binding for Python.</li>
+      <li><a href="https://github.com/sphinx-contrib/httpdomain"
       >sphinxcontrib-httpdomain</a> is a Sphinx domain for describing HTTP
       APIs.</li>
-      <li><a href="https://sqlalchemy-imageattach.readthedocs.io/"
-      >SQLAlchemy-ImageAttach</a> is a SQLAlchemy extension for attaching
-      images to entity objects.</li>
       <li class="etc">Et cetera:
         <ul>
-          <li><a href="https://pythonhosted.org/sphinxcontrib-autoprogram/"
+          <li><a href="https://github.com/dahlia/sqlalchemy-imageattach"
+          >SQLAlchemy-ImageAttach</a> is a SQLAlchemy extension for attaching
+          images to entity objects.</li>
+          <li><a href="https://github.com/dahlia/checkmate">checkmate</a> is a
+          small program to generate human-readable checklists from a given patch
+          (or pull request).</li>
+          <li><a href="https://github.com/dahlia/iterfzf"><tt>iterfzf</tt></a>
+          is a Pythonic interface to <a href="https://github.com/junegunn/fzf"
+          ><tt>fzf</tt></a>, a CLI fuzzy finder.</li>
+          <li><a href="https://github.com/dahlia/wikidata">wikidata</a> is a
+          <a href="https://www.wikidata.org/">Wikidata</a> client library for
+          Python.</li>
+          <li><a href="https://github.com/sphinx-contrib/autoprogram"
           >sphinxcontrib-autoprogram</a> is a Sphinx extension for documenting
           CLI programs in automated way.</li>
-          <li><a href="https://github.com/spoqa/iso4217">iso4217</a> is an <a
-          href="http://www.iso.org/iso/home/standards/currency_codes.htm">ISO
-          4217</a> currency data package for Python.</li>
         </ul>
         <script>
         // <![CDATA[
