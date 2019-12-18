@@ -98,20 +98,8 @@
     <img id="portrait" width="306" height="306" alt=""
          src="pic.jpg">
     <h1 id="me" lang="ko-Kore">
-      <div class="rubies">
-        <div class="ruby">
-          <div class="rb">&#27946;</div>
-          <div class="rt">Hong</div>
-        </div>
-        <div class="ruby">
-          <div class="rb">&#27665;</div>
-          <div class="rt">Min</div>
-        </div>
-        <div class="ruby">
-          <div class="rb">&#24985;</div>
-          <div class="rt">hee</div>
-        </div>
-      </div>
+      <ruby><rb>&#27946;</rb><rb>&#27665;</rb><rb>&#24985;</rb>
+      <rp>(</rp><rt>Hong </rt><rt>Min</rt><rt>hee</rt><rp>)</rp></ruby>
     </h1>
     <p>Hi! I'm Hong Minhee, a software engineer from Seoul.  You've reached
     here, my website.  I'm currently working for <a
@@ -220,6 +208,8 @@ href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90:Hongminhee"
         </ul>
         <script>
         // <![CDATA[
+        var me = document.getElementById('me');
+        me.innerHTML = '<div class="rubies"><div class="ruby"><div class="rb">&#27946;</div><div class="rt">Hong</div></div><div class="ruby"><div class="rb">&#27665;</div><div class="rt">Min</div></div><div class="ruby"><div class="rb">&#24985;</div><div class="rt">hee</div></div></div>';
         var projects = document.getElementsByClassName('etc')[0],
             etc = projects.getElementsByTagName('ul')[0],
             toggler = document.createElement('span');
