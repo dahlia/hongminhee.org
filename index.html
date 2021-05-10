@@ -49,38 +49,33 @@
     pre a { font-family: monospace; color: inherit; text-decoration: inherit; }
     .id { font-family: monospace; }
     .pgp-key span { font-family: inherit; color: inherit; margin-right: 0.5em; }
-    h1 {
-      font-family: 'Spoqa Han Sans JP', sans-serif;
-      font-size: 15px;
-      font-weight: 200;
-      margin: 0 0 30px -7px;
+    h1 { font-family: 'Spoqa Han Sans JP', sans-serif;
+         font-size: 15px;
+         font-weight: 200;
+         margin: -25px 0 30px -7px; transition: margin 0.5s; }
+    h1 ruby, h1 rb { font: inherit; }
+    h1 rb { font-size: 54px; }
+    h1 rt {
+      font-family: 'Spoqa Han Sans';
+      font-size: 15px; font-weight: 800;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      opacity: 0; transition: opacity 0.5s;
     }
-    h1 div {
-      font: inherit;
-    }
-    h1 .ruby {
+    h1:hover { margin: -5px 0 10px -7px; }
+    h1:hover rt, h1:hover rp { opacity: 0.25; }
+    h1.transformed { margin: -20px 0 30px -7px; }
+    h1.transformed:hover { margin: 0 0 10px -7px; }
+    h1.transformed ruby {
       display: inline-flex;
       flex-direction: column-reverse;
-      text-align: center;
     }
-    h1 .rb {
+    h1.transformed rb, h1.transformed rt {
       display: inline;
-      font-size: 54px;
-      height: 54px;
+      line-height: 1;
+      margin-bottom: 0;
     }
-    h1 .rt {
-      display: inline;
-      font-family: 'Spoqa Han Sans';
-      font-weight: 800;
-      height: 0px;
-      opacity: 0;
-      text-transform: uppercase;
-      transition: opacity 0.5s, height 0.5s;
-    }
-    .rubies:hover .rt {
-      height: 15px;
-      opacity: 0.25;
-    }
+    h1.transformed rt { text-align: center; }
     body > p:first-of-type { margin-top: 0; }
     a[lang]:after {
       color: gray;
@@ -101,6 +96,25 @@
       <ruby><rb>&#27946;</rb><rb>&#27665;</rb><rb>&#24985;</rb>
       <rp>(</rp><rt>Hong </rt><rt>Min</rt><rt>hee</rt><rp>)</rp></ruby>
     </h1>
+    <script>
+    // <![CDATA[
+    /* As of Sep 2018, except of Firefox, no browser supports multiple <rb>
+    elements in a single <ruby> element.  So transform that into equivalent
+    several <ruby> elements. */
+    if (typeof InstallTrigger === 'undefined') {
+      function rb(b, t) {
+        return '\x3cruby\x3e\x3crb\x3e' + b + '\x3c/rb\x3e\x3crt\x3e' +
+          t + '\x3c/rt\x3e\x3c/ruby\x3e';
+      }
+      var me = document.getElementById('me');
+      me.className += ' transformed';
+      me.innerHTML = a
+        = rb('&#27946;', 'Hong ')
+        + rb('&#27665;', 'Min')
+        + rb('&#24985;', 'hee');
+    }
+    // ]]>
+    </script>
     <p>Hi! I'm Hong Minhee, a software engineer from Seoul.  You've reached
     here, my website.  I'm currently working for <a
     href="https://planetariumhq.com/">Planetarium</a>, and write some
@@ -203,8 +217,6 @@ href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90:Hongminhee"
         </ul>
         <script>
         // <![CDATA[
-        var me = document.getElementById('me');
-        me.innerHTML = '<div class="rubies"><div class="ruby"><div class="rb">&#27946;</div><div class="rt">Hong</div></div><div class="ruby"><div class="rb">&#27665;</div><div class="rt">Min</div></div><div class="ruby"><div class="rb">&#24985;</div><div class="rt">hee</div></div></div>';
         var projects = document.getElementsByClassName('etc')[0],
             etc = projects.getElementsByTagName('ul')[0],
             toggler = document.createElement('span');
