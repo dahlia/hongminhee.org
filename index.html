@@ -14,12 +14,21 @@
           title="&#27946;&#27665;&#24985; &#48660;&#47196;&#44536;"
           href="https://blog.hongminhee.org/feed.xml">
     <title>&#27946; &#27665;&#24985; (Hong Minhee)</title>
-    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"
-          rel="stylesheet" type="text/css">
-    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css"
-          rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?
+    &family=Noto+Serif+KR:wght@400;900&display=swap">
     <style>
     * { font-family: 'Lucida Bright', 'Times New Roman', Times, serif; }
+    *:lang(ko) {
+      font-family: 'Noto Serif CJK KR', 'Noto Serif KR', 'Noto Serif',
+                   sans-serif;
+  }
+    *:lang(ko-Kore) {
+      font-family: 'Noto Serif CJK KR', 'Noto Serif CJK TC',
+                   'Noto Serif CJK JP', 'Noto Serif CJK SC', 'Noto Serif KR',
+                   'Noto Serif', sans-serif;
+    }
     body { font-size: large; padding: 1em 1em 0 65px; margin: 0 0 0 286px;
            max-width: 600px; line-height: 1.3; }
     body.portrait-random { margin-left: 219px; }
@@ -54,33 +63,14 @@
     .discord-username { font-family: monospace; }
     .discord-username span { font-family: inherit; color: gray; }
     .pgp-key span { font-family: inherit; color: inherit; margin-right: 0.5em; }
-    h1 { font-family: 'Spoqa Han Sans JP', sans-serif;
-         font-size: 15px;
-         font-weight: 200;
-         margin: -20px 0 30px -7px; transition: margin 0.5s; }
-    h1 ruby, h1 rb { font: inherit; }
-    h1 rb { font-size: 54px; }
-    h1 rt {
-      font-family: 'Spoqa Han Sans';
-      font-size: 15px; font-weight: 800;
-      margin-bottom: -15px;
-      text-transform: uppercase;
-      opacity: 0; transition: opacity 0.5s;
-    }
-    h1:hover { margin: -5px 0 15px -7px; }
-    h1:hover rt, h1:hover rp { opacity: 0.25; }
-    h1.transformed { margin: -20px 0 30px -7px; }
-    h1.transformed:hover { margin: 0 0 10px -7px; }
-    h1.transformed ruby {
-      display: inline-flex;
-      flex-direction: column-reverse;
-    }
-    h1.transformed rb, h1.transformed rt {
-      display: inline;
-      line-height: 1;
-      margin-bottom: 0;
-    }
-    h1.transformed rt { text-align: center; }
+    h1 { font-family: 'Noto Serif CJK KR', 'Noto Serif CJK TC',
+                      'Noto Serif CJK JP', 'Noto Serif CJK SC', 'Noto Serif KR',
+                      'Noto Serif', sans-serif;
+         font-size: 54px;
+         font-weight: 900;
+         margin: -12px 0 30px -3px; }
+    h1 > span { font: inherit; }
+    h1 > .family-name { margin-right: 0.8rem; }
     body > p:first-of-type { margin-top: 0; }
     a[hreflang]:after {
       color: gray;
@@ -97,31 +87,8 @@
   <body>
     <img id="portrait" width="306" height="306" alt=""
          src="pic.jpg">
-    <h1 id="me" lang="ko-Kore">
-      <ruby><rb>&#27946;</rb><rb>&#27665;</rb><rb>&#24985;</rb>
-      <rp lang="ko-Latn">(</rp><rt lang="ko-Latn">Hong
-      </rt><rt lang="ko-Latn">Min</rt><rt lang="ko-Latn">hee</rt><rp
-        lang="ko-Latn">)</rp></ruby>
-    </h1>
-    <script>
-    // <![CDATA[
-    /* As of Sep 2018, except of Firefox, no browser supports multiple <rb>
-    elements in a single <ruby> element.  So transform that into equivalent
-    several <ruby> elements. */
-    if (typeof InstallTrigger === 'undefined') {
-      function rb(b, t) {
-        return '\x3cruby\x3e\x3crb\x3e' + b + '\x3c/rb\x3e\x3crt\x3e' +
-          t + '\x3c/rt\x3e\x3c/ruby\x3e';
-      }
-      var me = document.getElementById('me');
-      me.className += ' transformed';
-      me.innerHTML = a
-        = rb('&#27946;', 'Hong ')
-        + rb('&#27665;', 'Min')
-        + rb('&#24985;', 'hee');
-    }
-    // ]]>
-    </script>
+    <h1 id="me" lang="ko-Kore"><span class="family-name"
+      >&#27946;</span>&#27665;&#24985;</h1>
     <p>Hi! I'm Hong Minhee, a software engineer from Seoul.  You've reached
     here, my website.  I'm currently working for <a
     href="https://planetariumhq.com/">Planetarium</a>, and write some
