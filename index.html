@@ -30,7 +30,8 @@
                    'Noto Serif', sans-serif;
     }
     body { font-size: large; padding: 1em 1em 0 65px; margin: 0 0 0 286px;
-           max-width: 600px; line-height: 1.3; }
+           max-width: 600px; line-height: 1.3;
+           background: white; color: black; }
     body.portrait-random { margin-left: 219px; }
     h2 { font-weight: normal; margin-top: 1.2em; }
     h2:target:before {
@@ -55,7 +56,10 @@
       li ul li:before { content: '\fe58'; padding-right: 0.5em; }
     }
     tt { font-family: monospace; }
-    pre a { font-family: monospace; color: inherit; text-decoration: inherit; }
+    pre a, pre a:link, pre a:visited {
+      font-family: monospace; color: inherit; text-decoration: inherit;
+    }
+    pre a:active { opacity: 0.5; }
     .id { font-family: monospace; }
     .handle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
               color: gray;
@@ -82,6 +86,15 @@
     }
     .toggler { color: inherit; opacity: 0.5; cursor: pointer; }
     .etc .hidden { display: none; }
+    /* */
+    @media (prefers-color-scheme: dark) {
+      body { background: #171717; color: #ddd; }
+      a:link { color: #6ca3d6; }
+      a:visited { color: #a66cb5; }
+      a:active { color: #c96565; }
+      h2:target:before { color: #c96565; }
+    }
+    /* */
     </style>
     <script defer
             data-domain="hongminhee.org"
@@ -227,7 +240,7 @@ href="https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90:Hongminhee"
             toggler = document.createElement('span');
         function showEtc() {
           toggler.firstChild.nodeValue = 'hide\u2026';
-          etc.className = etc.className.replace(/\bhidden\b/g, ' ');
+        etc.className = etc.className.replace(/\bhidden\b/g, ' ');
           toggler.onclick = hideEtc;
           return false;
         }
