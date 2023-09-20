@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css2?&family=Noto+Serif+KR:wght@400;900&display=swap);
+
+* {
+  font-family: 'Lucida Bright', 'Times New Roman', Times, serif;
+}
+*:lang(ko) {
+  font-family: 'Noto Serif CJK KR', 'Noto Serif KR', 'Noto Serif', sans-serif;
+}
+*:lang(ko-Kore), *:lang(ko-Hant), *:lang(lzh) {
+  font-family:
+    'Noto Serif CJK KR', 'Noto Serif CJK TC',
+    'Noto Serif CJK JP', 'Noto Serif CJK SC', 'Noto Serif KR',
+    'Noto Serif', sans-serif;
+}
+
+body {
+  font-size: large;
+  padding: 1em 1em 0 65px;
+  margin: 0 0 0 286px;
+  max-width: 600px;
+  line-height: 1.3;
+  background: white;
+  color: black;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #171717;
+    color: #ddd;
+  }
+}
+
+h2 {
+  font-weight: normal;
+  margin-top: 1.2em;
+}
+h2:target:before {
+  position: absolute;
+  margin-left: -1.5em;
+  content: '\2192';
+  color: red;
+  animation: blinker 1s linear infinite;
+}
+@media (prefers-color-scheme: dark) {
+  h2:target:before {
+    color: #c96565;
+  }
+}
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+img#portrait {
+  position: absolute;
+  left: 1em;
+  border: none;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: -1em;
+}
+ul li {
+  list-style-type: none;
+  padding-left: 1em;
+}
+ul li:before {
+  content: '\ff65';
+  margin-left: -1em;
+  padding-right: 0.5em;
+}
+li ul, li ol {
+  margin-left: 0;
+  padding-left: 0;
+}
+li ul li {
+  list-style-type: none;
+}
+li ul li:before {
+  content: '\fe58';
+  padding-right: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* Blink/WebKit */
+  li ul li:before {
+    content: '\fe58';
+    padding-right: 0.5em;
+  }
+}
+
+tt {
+  font-family: monospace;
+}
+
+pre a, pre a:link, pre a:visited {
+  font-family: monospace;
+  color: inherit;
+  text-decoration: inherit;
+}
+pre a:active {
+  opacity: 0.5;
+}
+
+.handle {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: gray;
+  font-size: smaller;
+}
+.discord-username {
+  font-family: monospace;
+}
+.discord-username span {
+  font-family: inherit;
+  color: gray;
+}
+.pgp-key span {
+  font-family: inherit;
+  color: inherit;
+  margin-right: 0.5em;
+}
+
+h1 {
+  font-family:
+    'Noto Serif CJK KR', 'Noto Serif CJK TC',
+    'Noto Serif CJK JP', 'Noto Serif CJK SC', 'Noto Serif KR',
+    'Noto Serif', serif;
+  font-size: 54px;
+  font-weight: 900;
+  margin: -12px 0 30px -3px;
+}
+h1 > span {
+  font: inherit;
+}
+h1 > .family-name {
+  margin-right: 0.8rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  a:link { color: #6ca3d6; }
+  a:visited { color: #a66cb5; }
+  a:active { color: #c96565; }
+}
+
+body > p:first-of-type {
+  margin-top: 0;
+}
+
+a[hreflang]:after {
+  color: gray;
+  content: ' (' attr(hreflang) ')';
+  font-size: small;
+  text-decoration: none;
+  text-decoration-line: none;
+  vertical-align: super;
+}
+
+.toggler {
+  color: inherit;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.etc .hidden {
+  display: none;
+}
