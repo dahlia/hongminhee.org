@@ -33,7 +33,7 @@ h2 {
   font-weight: normal;
   margin-top: 1.2em;
 }
-h2:target:before {
+:target:before {
   position: absolute;
   margin-left: -1.5em;
   content: '\2192';
@@ -41,7 +41,7 @@ h2:target:before {
   animation: blinker 1s linear infinite;
 }
 @media (prefers-color-scheme: dark) {
-  h2:target:before {
+  :target:before {
     color: #c96565;
   }
 }
@@ -100,12 +100,17 @@ pre a:active {
   opacity: 0.5;
 }
 
+a.non-public:link {
+  text-decoration: none;
+  cursor: help;
+  opacity: .6;
+}
 .handle {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: gray;
   font-size: smaller;
 }
-.discord-username {
+.discord-username > a:first-child {
   font-family: monospace;
 }
 .discord-username span {
@@ -160,4 +165,30 @@ a[hreflang]:after {
 }
 .etc .hidden {
   display: none;
+}
+
+.footnote {
+  font-size: smaller;
+}
+.footnote > hr {
+  border: none;
+  border-top: 1px solid #ccc;
+}
+@media (prefers-color-scheme: dark) {
+  .footnote > hr { border-color: #333; }
+}
+.footnote > h2 {
+  font-size: small;
+  font-family: sans-serif;
+  font-weight: bolder;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  opacity: .5;
+}
+.footnote > p {
+  margin: 0.5em;
+}
+.footnote > p:last-child {
+  margin-bottom: 1em;
 }
