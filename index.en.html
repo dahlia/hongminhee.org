@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="<?php echo $LANG ?>">
+  <head>
+    <?php include "_head.html"; ?>
+    <title>&#27946; &#27665;&#24985; (Hong Minhee)</title>
+  </head>
+  <body>
+    <?php include "_languages.html" ?>
+    <img id="portrait" width="306" height="306" alt=""
+         src="pic.jpg">
+    <h1 id="me" lang="ko-Hant"><span class="family-name"
+      >&#27946;</span>&#27665;&#24985;</h1>
+    <p>Hi! I'm Hong Minhee, a software engineer from Seoul.  You've reached
+    here, my website.  I write some
+    <a href="#projects">free/open source software</a>, which are mostly
+    written in Haskell, Python, and TypeScript.  I'm an advocate of
+    <a href="https://www.gnu.org/philosophy/free-sw.html">free</a>/<a
+    href="https://opensource.org/osd">open source</a> software and Open Web.
+    My professional interests are decentralized peer-to-peer networks
+    and statically typed functional programming languages.
+    (<a href="https://hongminhee.org/resume/">Résumé &rarr;</a>)</p>
+    <p>I also have outside interests on etymology, East Asian languages (<abbr
+    title="Chinese&ndash;Japanese&ndash;Korean">CJK</abbr>), Chinese characters,
+    and further, <a href="https://www.unicode.org/reports/tr38/"><abbr
+    title="Unicode Han Database">Unihan</abbr></a>.
+    <span lang="lzh">若爾能讀本文，則吾以筆談可論。</span></p>
+    <h2>Blog</h2>
+    <p>I've occasionally written about programming and few other topics
+       in mostly Korean (and sometimes English):</p>
+    <p><a href="https://writings.hongminhee.org/" rel="me">Hong Minhee on
+      Things</a>
+    <p>Note that both links above lead to the same page.
+      Depending on the locale settings of your web browser or OS,
+      you'll see the blog in either Korean or English.</p>
+    <h2>Find me elsewhere</h2>
+    <?php include "_links.html" ?>
+    <h2>Contact</h2>
+    <p>The best method to contact with me is by email (however, please ask your
+      questions about my projects in their issue trackers instead of email):</p>
+    <p><a href="mailto:hong&#64;minhee.org" rel="me"
+      class="handle">hong&#64;minhee.org</a></p>
+    <p>Here's my Discord username too:</p>
+    <p class="discord-username"><a
+    href="https://discordapp.com/users/533568224642465802">hongminhee<span
+    >#4945</span></a><a href="#non-public" class="non-public"
+    ><sup>&dagger;</sup></a></p>
+    <p>My <abbr title="Pretty Good Privacy">PGP</abbr> public key is:</p>
+    <?php include "_pgp.html" ?>
+    <h2 id="projects">Open Source</h2>
+    <ul>
+      <li><a href="https://libplanet.io/">Libplanet</a>
+        is a .NET library for creating multiplayer online game in decentralized
+        fashion, which means the whole gameplay occurs on a peer-to-peer network
+        among equal nodes rather than an authorized central server.</li>
+      <li><a href="https://bencodex.org/">Bencodex</a> is a serialization format
+        that extends BitTorrent's <a
+        href="http://www.bittorrent.org/beps/bep_0003.html#bencoding"
+        >Bencoding</a>.  It aims to force normalization (i.e., bijection between
+        values and their encodings) and cover common data types similar to JSON
+        data model at a time, while still be a superset of the original
+        Bencoding (i.e., every valid Bencoding representation is also a valid
+        Bencodex representation).  I wrote the specification and implementations
+        in several languages too:
+        <a href="https://github.com/planetarium/bencodex-python">Python</a>,
+        <a href="https://github.com/planetarium/bencodex.js">TypeScript</a>,
+        <a href="https://github.com/planetarium/bencodex.net">.NET</a>,
+        <a href="https://github.com/dahlia/bencodex-haskell">Haskell</a>, &amp;
+        <a href="https://github.com/dahlia/bencodex-php">PHP</a>.</li>
+      <li><a href="https://sass.github.io/libsass-python/">libsass-python</a> is
+        a SASS/SCSS package for Python.</li>
+      <li><a href="http://wand-py.org/">Wand</a> is a <a
+        href="https://docs.python.org/3/library/ctypes.html"><code
+        >ctypes</code></a>-based simple <a href="https://www.imagemagick.org/"
+        >ImageMagick API</a> binding for Python.</li>
+      <li><a href="https://github.com/dahlia/seonbi">Seonbi</a> (선비) is an
+        HTML preprocessor that makes typographic adjustments and transformations
+        from Korean mixed script (國漢文混用) to Hangul exclusive writing
+        (한글전용).
+      </li>
+      <li><a href="https://github.com/dahlia/jikji">Jikji</a> (直指) is a small
+        toolkit for building your own static site generators on
+        <a href="https://deno.land/">Deno</a>.</li>
+      <li><a href="https://github.com/sphinx-contrib/httpdomain"
+        >sphinxcontrib-httpdomain</a> is a <a
+        href="https://www.sphinx-doc.org/">Sphinx</a> domain for describing HTTP
+        APIs.</li>
+      <li><a href="https://github.com/dahlia/wikidata">wikidata</a> is a
+        <a href="https://www.wikidata.org/">Wikidata</a> client library for
+        Python.</li>
+      <li><a href="https://github.com/geofront-auth/geofront">Geofront</a> is
+        a simple SSH key management service.</li>
+      <li class="etc" data-show="see more" data-hide="hide">Et cetera:
+        <ul>
+          <li><a href="https://nirum.org/">Nirum</a> is an <abbr
+            title="interface definition language">IDL</abbr> compiler and
+            <abbr title="remote procedure call">RPC</abbr>/distributed object
+            framework for microservices.</li>
+          <li><a href="https://github.com/dahlia/aitertools">aitertools</a> is
+            a well-tested collection of utility functions dealing with
+            asynchronous iterables in TypeScript for Deno.</li>
+          <li><a href="https://github.com/dahlia/json-hash">json-hash</a> is
+            a Deno package to deal with JSON data with cryptography.
+            It implements <a href="https://tools.ietf.org/html/rfc8785"><abbr
+            title="JSON Canonicalization Scheme">JCS</abbr></a>, JSON digests,
+            and JSON Merkle hashes.</li>
+          <li><a href="https://github.com/dahlia/sqlalchemy-imageattach"
+            >SQLAlchemy-ImageAttach</a> is a SQLAlchemy extension for attaching
+            images to entity objects.</li>
+          <li><a href="https://github.com/dahlia/checkmate">checkmate</a> is a
+            small program to generate human-readable checklists from a given
+            patch (or pull request).</li>
+          <li><a href="https://github.com/dahlia/iterfzf">iterfzf</a>
+            is a Pythonic interface to <a href="https://github.com/junegunn/fzf"
+            >fzf</a>, a CLI fuzzy finder.</li>
+          <li><a href="https://github.com/sphinx-contrib/autoprogram"
+            >sphinxcontrib-autoprogram</a> is a Sphinx extension for documenting
+            CLI programs in automated way.</li>
+          <li><a href="https://github.com/dahlia/submark">submark</a> is a small
+            CLI program (and also a GitHub action) to extract some particular
+            section from a given CommonMark/Markdown document.</li>
+          <li><a href="https://github.com/dahlia/mediawiki-rc-mastodon-bot"
+            >mediawiki-rc-mastodon-bot</a> is a small program relays
+            RecentChanges from a MediaWiki site to a Mastodon account.</li>
+        </ul>
+        <script src="projects.js"></script>
+      </li>
+    </ul>
+    <p>You also can see my other activities about open source hacking at my
+    <a href="https://github.com/dahlia" rel="me">GitHub</a>,
+    <a href="https://gitlab.com/hongminhee" rel="me">GitLab</a>,
+    <a href="https://bitbucket.org/dahlia" rel="me">Bitbucket</a>,
+    <a href="https://hackage.haskell.org/user/hongminhee" rel="me">Hackage</a>,
+    <a href="https://pypi.org/user/dahlia/" rel="me">PyPI</a>, and
+    <a href="https://www.nuget.org/profiles/hongminhee" rel="me">NuGet</a>.</p>
+    <div class="footnote">
+      <hr>
+      <h2>Footnotes</h2>
+      <p id="non-public"><span>&dagger;</span> These web pages probably require
+      you to sign in the service.</p>
+    </div>
+  </body>
+</html>

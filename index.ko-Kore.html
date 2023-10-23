@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="<?php echo $LANG ?>">
+  <head>
+    <?php include "_head.html"; ?>
+    <title>&#27946;&#27665;&#24985; (홍민희)</title>
+  </head>
+  <body>
+    <?php include "_languages.html" ?>
+    <img id="portrait" width="306" height="306" alt=""
+         src="pic.jpg">
+    <h1 id="me" lang="ko-Hant"><span class="family-name"
+      >&#27946;</span>&#27665;&#24985;</h1>
+    <p>安寧하세요. 여기는 서울에서 소프트웨어 프로그래머로 일하는 洪民憙의
+      웹사이트입니다. 저는 <a href="#projects">自由·오픈 소스 소프트웨어</a>를
+      만들며, 主로 Haskell, Python, TypeScript 같은 言語로 코딩합니다.
+      <a href="https://www.gnu.org/philosophy/free-sw.html">自由</a>·<a
+        href="https://opensource.org/osd">오픈 소스</a> 소프트웨어와 오픈 웹의
+      熱烈한 支持者이기도 합니다. 제 職業的 關心事로는 脫中央
+      <abbr title="peer-to-peer">P2P</abbr> 네트워크와 靜的 타입 函數型
+      프로그래밍 言語 等이 있습니다.
+      <a href="https://hongminhee.org/resume/">履歷書 &rarr;</a>)</p>
+    <p>그 外에도 私的으로 語源, 東아시아 言語
+      (<abbr title="Chinese&ndash;Japanese&ndash;Korean">CJK</abbr>, 漢字,
+      나아가 <a href="https://www.unicode.org/reports/tr38/">Unihan</a> 같은
+      것에 關心이 있습니다.
+      <span lang="lzh">若爾能讀本文，則吾以筆談可論。</span></p>
+    <h2>블로그</h2>
+    <p>아래 블로그에 種種 프로그래밍이나 다른 主題로 글을 씁니다.
+      主로 韓國語로 글을 쓰지만, 가끔은 英語로도 씁니다.</p>
+    <p><a href="https://writings.hongminhee.org/" rel="me">洪民憙雜記</a></p>
+    <p>參考로 위 링크는 브라우저나 運營體制의 言語·로캘 設定에 따라 韓國語나
+      英文으로 다르게 表示됩니다.</p>
+    <h2>쓰고 있는 서비스</h2>
+    <?php include "_links.html" ?>
+    <h2>連絡處</h2>
+    <p>제게 連絡하시려거든 아래 住所로 이메일을 보내는 것이 가장 좋습니다.
+      (단, 제 프로젝트에 관한 問議는 이메일이 아니라 該當 프로젝트의 이슈
+      트래커에 해 주십시오.)</p>
+    <p><a href="mailto:hong&#64;minhee.org" rel="me"
+      class="handle">hong&#64;minhee.org</a></p>
+    <p>디스코드도 利用하고 있습니다. 아이디는 아래와 같습니다.</p>
+    <p class="discord-username"><a
+    href="https://discordapp.com/users/533568224642465802">hongminhee<span
+    >#4945</span></a><a href="#non-public" class="non-public"
+    ><sup>&dagger;</sup></a></p>
+    <p>제 <abbr title="Pretty Good Privacy">PGP</abbr> 公開 키는 다음과
+      같습니다.</p>
+    <?php include "_pgp.html" ?>
+    <h2 id="projects">오픈 소스</h2>
+    <ul>
+      <li><a href="https://libplanet.io/">Libplanet</a>은 脫中央 멀티플레이어
+        온라인 게임을 만들기 爲한 .NET 라이브러리로, 모든 게임 플레이가 特權的
+        中央 서버가 아닌 同等한 노드 사이의 P2P 네트워크에서 이뤄지게 합니다.
+        </li>
+      <li><a href="https://bencodex.org/">Bencodex</a>는 BitTorrent의 <a
+        href="http://www.bittorrent.org/beps/bep_0003.html#bencoding"
+        >Bencoding</a>을 擴張한 直列化 포맷입니다. 正規化의 強制(卽, 값과 符號
+        사이의 對稱性)와 JSON 資料 모델과 비슷한 資料型의 支援을 함께 갖추되,
+        如前히 元來의 Bencoding과 上位互換됩니다. (卽, 모든 有效한 Bencoding
+        表現은 有效한 Bencodex 表現이기도 합니다.) 제가 明細를 썼고,
+        <a href="https://github.com/planetarium/bencodex-python">Python</a>,
+        <a href="https://github.com/planetarium/bencodex.js">TypeScript</a>,
+        <a href="https://github.com/planetarium/bencodex.net">.NET</a>,
+        <a href="https://github.com/dahlia/bencodex-haskell">Haskell</a>,
+        <a href="https://github.com/dahlia/bencodex-php">PHP</a>와 같은 여러
+        言語로 具顯도 했습니다.</li>
+      <li><a href="https://sass.github.io/libsass-python/">libsass-python</a>은
+        Python用 SASS/SCSS 패키지입니다.</li>
+      <li><a href="http://wand-py.org/">Wand</a>는 <a
+        href="https://docs.python.org/3/library/ctypes.html"><code
+        >ctypes</code></a> 基盤의 심플한 Python用 <a
+        href="https://www.imagemagick.org/">ImageMagick API</a>
+        바인딩입니다.</li>
+      <li><a href="https://github.com/dahlia/seonbi">선비</a>(Seonbi)는 여러
+        文章符號 校正하고 國漢文混用文을 한글專用文으로 變換해주는 HTML
+        前處理機입니다.</li>
+      <li><a href="https://github.com/dahlia/jikji">直指</a>(Jikji)는 靜的
+        사이트 生成機를 만들기 爲한 <a href="https://deno.land/">Deno</a>
+        라이브러리입니다.</li>
+      <li><a href="https://github.com/sphinx-contrib/httpdomain"
+        >sphinxcontrib-httpdomain</a>는 HTTP API를 記述하기 爲한
+        <a href="https://www.sphinx-doc.org/">Sphinx</a> 도메인입니다.</li>
+      <li><a href="https://github.com/dahlia/wikidata">wikidata</a>는 Python用
+        <a href="https://www.wikidata.org/">Wikidata</a> 클라이언트
+        라이브러리입니다.</li>
+      <li><a href="https://github.com/geofront-auth/geofront">Geofront</a>는
+        簡單한 SSH 키 管理 서비스입니다.</li>
+      <li class="etc" data-show="더 보기" data-hide="가리기">其他&hellip;
+        <ul>
+          <li><a href="https://nirum.org/">Nirum</a>은 마이크로서비스를 爲한
+            <abbr title="interface definition language">IDL</abbr> 컴파일러이자
+            <abbr title="remote procedure call">RPC</abbr> 및 分散 客體
+            프레임워크입니다.</li>
+          <li><a href="https://github.com/dahlia/aitertools">aitertools</a>는
+            TypeScript에서 非同期 反復子를 다루기 爲한 잘 테스트된 Deno用
+            유틸리티 函數 모음입니다.</li>
+          <li><a href="https://github.com/dahlia/json-hash">json-hash</a>는
+            JSON 資料를 暗號學的으로 다루기 爲한 Deno 패키지입니다.
+            <a href="https://tools.ietf.org/html/rfc8785"><abbr title="JSON
+              Canonicalization Scheme">JCS</abbr></a>, JSON 다이제스트,
+            JSON 머클 트리를 具顯합니다.</li>
+          <li><a href="https://github.com/dahlia/sqlalchemy-imageattach"
+            >SQLAlchemy-ImageAttach</a>는 엔티티 客體에 이미지를 添附할 수 있게
+            해주는 SQLAlchemy 擴張입니다.</li>
+          <li><a href="https://github.com/dahlia/checkmate">checkmate</a>는
+            주어진 패치(나 풀 리퀘스트)에서 사람이 한눈에 볼 수 있는
+            체크리스트를 만들어 주는 작은 프로그램입니다.</li>
+          <li><a href="https://github.com/dahlia/iterfzf">iterfzf</a>은 命令行
+            퍼키 파인더인 <a href="https://github.com/junegunn/fzf">fzf</a>의
+            Python 인터페이스입니다.</li>
+          <li><a href="https://github.com/sphinx-contrib/autoprogram"
+            >sphinxcontrib-autoprogram</a>은 命令行 프로그램을 自動으로
+            文書化하는 Sphinx 擴張입니다.</li>
+          <li><a href="https://github.com/dahlia/submark">submark</a>는 주어진
+            CommonMark/Markdown 文書로부터 特定 部分만 抽出하는 작은 命令行
+            프로그램입니다. (GitHub 액션으로도 使用 可能.)</li>
+          <li><a href="https://github.com/dahlia/mediawiki-rc-mastodon-bot"
+            >mediawiki-rc-mastodon-bot</a>은 MediaWiki 사이트의 最近바뀜 內容을
+            Mastodon에 中繼하는 작은 프로그램입니다.</li>
+        </ul>
+        <script src="projects.js"></script>
+      </li>
+    </ul>
+    <p>제 오픈 소스 關聯 活動은 제
+      <a href="https://github.com/dahlia" rel="me">GitHub</a>,
+      <a href="https://gitlab.com/hongminhee" rel="me">GitLab</a>,
+      <a href="https://bitbucket.org/dahlia" rel="me">Bitbucket</a>,
+      <a href="https://hackage.haskell.org/user/hongminhee" rel="me">Hackage</a>,
+      <a href="https://pypi.org/user/dahlia/" rel="me">PyPI</a>,
+      <a href="https://www.nuget.org/profiles/hongminhee" rel="me">NuGet</a
+        >에서도 살펴볼 수 있습니다.
+    <div class="footnote">
+      <hr>
+      <h2>腳注</h2>
+      <p id="non-public"><span>&dagger;</span> 該當 서비스는 보기만 하는 데에도
+        로그인을 要求할 것입니다. (遺憾으로 생각합니다.)</p>
+    </div>
+  </body>
+</html>
