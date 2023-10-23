@@ -115,7 +115,6 @@ h2:lang(ko) {
   line-height: 1.6;
   color: gray;
 }
-
 #languages a {
   color: black;
   text-decoration: none;
@@ -134,6 +133,9 @@ h2:lang(ko) {
   font-weight: bolder;
   cursor: default;
   text-decoration-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  #languages a { color: white; }
 }
 
 img#portrait {
