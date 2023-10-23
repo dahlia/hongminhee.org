@@ -57,11 +57,11 @@ function match_language_tag(string $a, string $b): int {
   return $score;
 }
 
-$LANG = "en";
-
 $accept_languages = parse_accept_languages(
   empty($_GET["lang"])
-    ? $_SERVER["HTTP_ACCEPT_LANGUAGE"]
+    ? (empty($_SERVER["HTTP_ACCEPT_LANGUAGE"])
+      ? "en"
+      : $_SERVER["HTTP_ACCEPT_LANGUAGE"])
     : $_GET["lang"]
 );
 $available_languages = array();
@@ -77,4 +77,6 @@ $available_languages[$available_language] = max($scores);
 arsort($available_languages, SORT_NUMERIC);
 $LANG = key($available_languages);
 
+header("Vary: Accept-Language");
+header("Content-Language: $LANG");
 include "index.$LANG.html";
