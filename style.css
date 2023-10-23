@@ -18,11 +18,50 @@ body {
   font-size: large;
   padding: 1em 1em 0 65px;
   margin: 0 0 0 286px;
-  max-width: 600px;
   line-height: 1.3;
   background: white;
   color: black;
+  max-width: 600px;
 }
+@media screen and (max-width: 990px) {
+  #languages {
+    margin: 0;
+    position: static !important;
+    float: right;
+  }
+
+  body {
+    margin: 0;
+    padding: 1em;
+  }
+
+  img#portrait {
+    position: static !important;
+    width: 85px;
+    height: 85px;
+    margin-right: 1em;
+    padding-bottom: 0.5em;
+    float: left;
+  }
+
+  img#portrait + h1 {
+    padding-top: 30px;
+    line-height: 55px;
+    padding-bottom: 0.5em;
+    margin: 0;
+  }
+
+  .pgp-key {
+    word-wrap: break-word;
+    word-break: keep-all;
+    white-space: normal;
+  }
+
+  ul li {
+    padding-left: 2em !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background: #171717;
@@ -39,6 +78,10 @@ a {
   text-underline-offset: 3px;
 }
 
+h1 {
+  word-break: break-all;
+  white-space: nowrap;
+}
 h2 {
   font-weight: normal;
   margin-top: 1.2em;
