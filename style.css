@@ -199,6 +199,9 @@ a.non-public:link {
   color: gray;
   font-size: smaller;
 }
+p > .handle:first-child:last-child {
+  font-size: inherit;
+}
 .discord-username > a:first-child {
   font-family: Consolas, monospace;
 }
