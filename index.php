@@ -79,4 +79,5 @@ $LANG = key($available_languages);
 
 header("Vary: Accept-Language");
 header("Content-Language: $LANG");
+header("Content-Type: text/html; charset=utf-8");
 include "index.$LANG.html";
