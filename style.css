@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?&family=Noto+Serif+KR:wght@400;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?&family=Noto+Sans+KR:wght@500;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?&family=Noto+Serif+JP:wght@400;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?&family=Noto+Sans+JP:wght@500;900&display=swap);
 
 * {
   font-family: 'Lucida Bright', 'Times New Roman', Times, serif;
@@ -11,6 +13,12 @@
   font-family:
     'Noto Serif CJK KR', 'Noto Serif CJK TC',
     'Noto Serif CJK JP', 'Noto Serif CJK SC', 'Noto Serif KR',
+    'Noto Serif', serif;
+}
+*:lang(ja), *:lang(lzh-JP) {
+  font-family:
+    'Noto Serif CJK JP', 'Noto Serif CJK TC',
+    'Noto Serif CJK KR', 'Noto Serif CJK SC', 'Noto Serif JP',
     'Noto Serif', serif;
 }
 
@@ -69,7 +77,7 @@ body {
   }
 }
 
-p:lang(ko), li:lang(ko) {
+p:lang(ko), li:lang(ko), p:lang(ja), li:lang(ja) {
   line-height: 1.6;
   letter-spacing: -0.015em;
 }
@@ -89,6 +97,10 @@ h2 {
 h2:lang(ko) {
   font-weight: 500;
   font-family: 'Noto Sans CJK KR', 'Noto Sans KR', 'Noto Sans', sans-serif;
+}
+h2:lang(ja) {
+  font-weight: 500;
+  font-family: 'Noto Sans CJK JP', 'Noto Sans JP', 'Noto Sans', sans-serif;
 }
 
 :target:before {
@@ -129,7 +141,8 @@ h2:lang(ko) {
 }
 #languages:lang(en) a[hreflang=en],
 #languages:lang(ko-Kore) a[hreflang=ko-Kore],
-#languages:lang(ko-Hang-KR) a[hreflang=ko-Hang-KR] {
+#languages:lang(ko-Hang-KR) a[hreflang=ko-Hang-KR],
+#languages:lang(ja) a[hreflang=ja] {
   font-weight: bolder;
   cursor: default;
   text-decoration-color: transparent;
@@ -230,6 +243,7 @@ h1 > span {
 h1 > .family-name {
   margin-right: 0.8rem;
 }
+:lang(ja) h1 { margin-bottom: 20px; }
 
 @media (prefers-color-scheme: dark) {
   a:link { color: #6ca3d6; }

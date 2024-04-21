@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="<?php echo $LANG ?>">
+  <head>
+    <?php include "_head.html"; ?>
+    <title>&#27946; &#27665;&#24985;（ホン・ミンヒ）</title>
+  </head>
+  <body>
+    <?php include "_languages.html" ?>
+    <img id="portrait" width="306" height="306" alt=""
+         src="pic.jpg">
+    <h1 id="me" lang="ko-Hant"><span class="family-name"
+      >&#27946;</span>&#27665;&#24985;</h1>
+    <p>ようこそ！ソウルでソフトウェアプログラマーとして働いている<ruby
+      >洪<rp>(</rp><rt>ホン</rt><rp>)</rp>&nbsp;<rt>・</rt>民憙<rp>(</rp><rt
+      >ミンヒ</rt><rp>)</rp></ruby>のホームページです。私は<a href="#projects"
+      >自由・オープンソースソフトウェア</a>を作り、主にHaskell、Python、<!--
+      -->TypeScript 等の言語でコーディングしています。<a
+      href="https://www.gnu.org/philosophy/free-sw.html">自由</a>・<a
+      href="https://opensource.org/osd">オープンソース</a>ソフトウェアと<a
+      href="https://www.theverge.com/24063290/fediverse-explained-activitypub-social-media-open-protocol"
+      >フェディバース</a>の熱烈な支持者でもあります。私の専門的な関心は、分散型<!--
+      --><abbr title="peer-to-peer">P2P</abbr>ネットワークと<!--
+      -->静的型関数型プログラミング言語などです。（<a
+      href="https://hongminhee.org/resume/">履歴書 &rarr;</a>）</p>
+    <p>その他、個人的には語源、東アジア言語（<abbr
+      title="Chinese&ndash;Japanese&ndash;Korean">CJK</abbr>）、漢字、さらには<a
+      <a href="https://www.unicode.org/reports/tr38/"><abbr
+      title="Unicode Han Database">Unihan</abbr></a>などに興味があります。<!--
+      --><span lang="lzh-JP">若尓能読本文，則吾以筆談可論。</span></p>
+    <h2>ブログ</h2>
+    <p>下記のブログに時々、プログラミングや他の話題について書いています。<!--
+      -->主に韓国語で書きますが、たまに英語でも書きます。</p>
+    <p><a href="https://writings.hongminhee.org/" rel="me">洪民憙雑記</a></p>
+    <p>ちなみに、上のリンクはブラウザやオペレーティングシステムの言語・ロケール<!--
+      -->設定によって、韓国語と英語で違って表示されます。</p>
+    <h2>使っているサービス</h2>
+    <?php include "_links.html" ?>
+    <h2>連絡先</h2>
+    <p>私に連絡する場合は、以下のアドレスにメールを送るのが一番良い方法です。<!--
+      -->（但し、私のプロジェクトに関する問い合わせは、メールではなく、<!--
+      -->そのプロジェクトの課題トラッカーにお願いします）</p>
+    <p><a href="mailto:hong&#64;minhee.org" rel="me"
+      class="handle">hong&#64;minhee.org</a></p>
+    <p>Discordも使っています。ユーザ名は以下の通りです。</p>
+    <p class="discord-username"><a
+    href="https://discordapp.com/users/533568224642465802">hongminhee<span
+    >#4945</span></a><a href="#non-public" class="non-public"
+    ><sup>&dagger;</sup></a></p>
+    <p>私の<abbr title="Pretty Good Privacy">PGP</abbr>公開鍵は以下の通りです。
+      </p>
+    <?php include "_pgp.html" ?>
+    <h2 id="projects">オープンソース</h2>
+    <ul>
+      <li><a href="https://libplanet.io/">Libplanet</a>は、脱中央集権的な<!--
+        -->マルチプレイヤーオンラインゲームを作成する為の.NETライブラリで、<!--
+        -->全てのゲームプレイが特権的な中央サーバーではなく、<!--
+        -->同等のノード間のピアツーピアネットワークで行われるようにします。</li>
+      <li><a href="https://bencodex.org/">Bencodex</a>はBitTorrentの<a
+        href="http://www.bittorrent.org/beps/bep_0003.html#bencoding"
+        >Bencoding</a>を拡張したシリアル化フォーマットです。正規化の強制<!--
+        -->（つまり、値と符号の対称性）とJSONデータモデルに似たデータ型の<!--
+        -->サポートを持ちながら、元のBencodingと上位互換性があります。<!--
+        -->（つまり、すべての有効なBencoding表現は有効なBencodex表現<!--
+        -->でもあります）私が仕様を書き、<a
+        href="https://github.com/planetarium/bencodex-python">Python</a>、<a
+        href="https://github.com/planetarium/bencodex.js">TypeScript</a>、<a
+        href="https://github.com/planetarium/bencodex.net">.NET</a>、<a
+        href="https://github.com/dahlia/bencodex-haskell">Haskell</a>、<a
+        href="https://github.com/dahlia/bencodex-php">PHP</a>等の複数の<!--
+        -->言語で実装しました。</li>
+      <li><a href="https://sass.github.io/libsass-python/"
+        >libsass-python</a> はPython用のSASS/SCSSパッケージです。</li>
+      <li><a href="http://wand-py.org/">Wand</a>は<a
+        href="https://docs.python.org/3/library/ctypes.html"><code
+        >ctypes</code></a>ベースのシンプルなPython用のImageMagick
+        APIバインディングです。</li>
+      <li><a href="https://dojang.dev/">Dojang</a>はクロスプラットフォームの<!--
+        -->ドットファイル（dotfiles）マネージャーです。</li>
+      <li><a href="https://github.com/dahlia/seonbi">Seonbi</a>は、<!--
+        -->韓国語の様々な句読点校正と漢字ハングル混じり文をハングル専用文に<!--
+        -->変換してくれるHTML前処理機です。</li>
+      <li><a href="https://fedify.dev/">Fedify</a>はTypeScriptで作った<a
+        href="https://www.w3.org/TR/activitypub/">ActivityPub</a>の実装であり、<!--
+        -->フェディバースサーバーフレームワークです。</li>
+      <li><a href="https://github.com/dahlia/jikji">直指</a>（Jikji）は<!--
+        -->静的サイトジェネレータを作るための<a href="https://deno.com/"
+        >Deno</a>ライブラリです。</li>
+      <li><a href="https://github.com/sphinx-contrib/httpdomain"
+        >sphinxcontrib-httpdomain</a>はHTTP APIを記述する為の<a
+        href="https://www.sphinx-doc.org/">Sphinx</a>ドメインです。</li>
+      <li><a href="https://github.com/dahlia/wikidata"
+        >Wikidata</a>はPython用の<a href="https://www.wikidata.org/"
+        >Wikidata</a>クライアントライブラリです。</li>
+      <li><a href="https://github.com/geofront-auth/geofront">Geofront</a><!--
+        -->は簡単なSSH鍵管理サービスです。</li>
+      <li class="etc" data-show="もっと見る" data-hide="隠す">その他…
+        <ul>
+          <li><a href="https://nirum.org/">Nirum</a>はマイクロサービス用の<abbr
+            title="interface definition language">IDL</abbr>コンパイラであり、<abbr
+            title="interface definition language">IDL</abbr>と<!--
+            -->分散オブジェクトフレームワークです。</li>
+          <li><a href="https://github.com/dahlia/logtape"
+            >LogTape</a>は、Deno、Node.js、Bun、ブラウザで動作する<!--
+            -->シンプルなロギングライブラリ。</li>
+          <li><a href="https://github.com/dahlia/aitertools">aitertools</a>は、<!--
+           -->TypeScriptで非同期イテレータを扱う為のテスト済みのユーティリティ<!--
+           -->関数のコレクションです。</li>
+          <li><a href="https://github.com/dahlia/json-hash">json-hash</a>は<!--
+            -->JSONデータを暗号学的に扱う為のDenoパッケージです。<a
+            href="https://tools.ietf.org/html/rfc8785"><abbr
+            title="JSON Canonicalization Scheme">JCS</abbr></a>、<!--
+            -->JSONダイジェスト、JSONマクルツリーを実装しています。</li>
+          <li><a href="https://github.com/dahlia/sqlalchemy-imageattach"
+            >はSQLAlchemyの拡張機能で、エンティティオブジェクトに画像を添付する<!--
+            -->ことができます。<li>
+          <li><a href="https://github.com/dahlia/checkmate">checkmate</a>は、<!--
+            -->与えられたパッチ（またはプルリクエスト）から人が一目で分かる<!--
+            -->チェックリストを作成する小さなプログラムです。</li>
+          <li><a href="https://github.com/dahlia/iterfzf">iterfzf</a>は<!--
+            -->コマンドラインファジーファインダーであるfzfのPython<!--
+            -->インターフェースです。</li>
+          <li><a href="https://github.com/sphinx-contrib/autoprogram"
+            >sphinxcontrib-autoprogram</a>はコマンドラインプログラムを自動的に
+            -->文書化するSphinxの拡張です。</li>
+          <li><a href="https://github.com/dahlia/submark">submark</a>は、<!--
+            -->与えられたCommonMark/Markdown文書から特定の部分だけを抽出する<!--
+            -->小さなコマンドラインプログラムです。<!--
+            -->（GitHubアクションとしても利用可能）</li>
+          <li><a href="https://github.com/dahlia/mediawiki-rc-mastodon-bot"
+            >mediawiki-rc-mastodon-bot</a>はMediaWikiサイトの最近の変更を<!--
+            -->Mastodonに中継する小さなプログラムです。</li>
+        </ul>
+        <script src="projects.js"></script>
+      </li>
+    </ul>
+    <p>私のオープンソース関連の活動は私の<a href="https://github.com/dahlia"
+      rel="me">GitHub</a>、<a href="https://gitlab.com/hongminhee"
+      rel="me">GitLab</a>、<a href="https://www.npmjs.com/~hongminhee"
+      rel="me">npm</a>、<a href="https://jsr.io/user/ba6bb5b5-a37c-44ad-a0a6-13e8e710d1d7"
+      rel="me">JSR</a>、<a href="https://hackage.haskell.org/user/hongminhee"
+      rel="me">Hackage</a>、<a href="https://pypi.org/user/dahlia/"
+      rel="me">PyPI</a>、<a href="https://www.nuget.org/profiles/hongminhee"
+      rel="me">NuGet</a>でも見ることができます。</p>
+    <div class="footnote">
+      <hr>
+      <h2>脚注</h2>
+      <p id="non-public"><span>&dagger;</span>
+        当該サービスは、閲覧するだけでもログインが必要になります。<!--
+        -->（申し訳ございません）</p>
+    </div>
+  </body>
+</html>

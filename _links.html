@@ -6,13 +6,15 @@
   <li><a href="https://todon.eu/@hongminhee" rel="me">Mastodon</a>
     <span class="handle">(@hongminhee@todon.eu)</span></li>
   <li><a href="https://twitter.com/hongminhee" rel="me">X</a><a
-    href="#non-public" class="non-public"><sup>&dagger;</sup></a>,
+    href="#non-public" class="non-public"><sup>&dagger;</sup></a><!--
     <?php if ($LANG === "ko-Kore"): ?>
-      舊 Twitter
+      -->, 舊 Twitter
     <?php elseif ($LANG === "ko-Hang-KR"): ?>
-      구 Twitter
+      -->, 구 Twitter
+    <?php elseif ($LANG === "ja"): ?>
+      -->、旧Twitter
     <?php else: ?>
-      formerly Twitter
+      -->, formerly Twitter
     <?php endif ?>
     <span class="handle">(@hongminhee)</span></li>
   <li><a href="https://bsky.app/profile/hongminhee.org" rel="me"
@@ -40,6 +42,8 @@
            rel="me"><!--
       <?php if ($LANG === "ko-Kore"): ?>
         -->積讀家<!--
+      <?php elseif ($LANG == "ja"): ?>
+        -->積読家<!--
       <?php else: ?>
         -->적독가<!--
       <?php endif ?>
