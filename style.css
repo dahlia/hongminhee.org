@@ -257,12 +257,16 @@ body > p:first-of-type {
 
 a[hreflang]:after {
   color: gray;
-  content: ' (' attr(hreflang) ')';
+  content: ' ' attr(hreflang);
   font-size: small;
   text-decoration: none;
   text-decoration-line: none;
   vertical-align: super;
+  border-bottom: none;
 }
+a[hreflang=en]:after { content: ' English'; }
+a[hreflang=ko]:after { content: ' 한국어'; }
+a[hreflang=ja]:after { content: ' 日本語'; }
 
 .toggler {
   color: inherit;
