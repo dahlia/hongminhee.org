@@ -3,11 +3,18 @@
     <span class="handle">(@dahlia)</span></li>
   <li><a href="https://gitlab.com/hongminhee" rel="me">GitLab</a>
     <span class="handle">(@hongminhee)</span></li>
-  <li><a href="https://fosstodon.org/@hongminhee" rel="me">Mastodon</a>
-    <span class="handle">(@hongminhee@fosstodon.org)</span></li>
-  <li><a href="https://fedibird.com/@hongminhee" rel="me"
-    hreflang="ja">Fedibird</a>
-    <span class="handle">(@hongminhee@fedibird.com)</span></li>
+  <li><a href="https://hollo.social/@hongminhee" rel="me"><!--
+    <?php if ($LANG === "ko-Kore"): ?>
+      -->聯合宇宙<!--
+    <?php elseif ($LANG === "ko-Hang-KR"): ?>
+      -->연합우주<!--
+    <?php elseif ($LANG === "ja"): ?>
+      -->フェディバース<!--
+    <?php else: ?>
+      -->Fediverse<!--
+    <?php endif ?>
+    --></a>
+    <span class="handle">(@hongminhee@hollo.social)</span></li>
   <li><a href="https://twitter.com/hongminhee" rel="me">X</a><a
     href="#non-public" class="non-public"><sup>&dagger;</sup></a><!--
     <?php if ($LANG === "ko-Kore"): ?>
