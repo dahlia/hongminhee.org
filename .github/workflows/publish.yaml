@@ -6,16 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: sand4rt/ftp-deployer@v1.3
+    - run: rm -rf .git/
+    - uses: datanomi/SFTP-Push@v1.2.1
       with:
-        sftp: false
-        port: 21
-        host: ${{ secrets.FTP_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        remote_folder: ${{ secrets.FTP_REMOTE_DIR }}
-        local_folder: .
-        exclude: '[".git*"]'
+        username: ${{ secrets.SFTP_USER }}
+        server: ${{ secrets.SFTP_SERVER }}
+        port: ${{ secrets.SFTP_PORT }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: ./*
+        remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
     - uses: chetan/invalidate-cloudfront-action@v2
       env:
         DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
