@@ -161,5 +161,18 @@
         当該サービスは、閲覧するだけでもログインを要求するでしょう。<!--
         -->（残念に思います）</p>
     </div>
+    <script type="module">
+      // The input is reliable text internal, so DOMPurify is not needed.
+      import { loadDefaultJapaneseParser, HTMLProcessor }
+        from "./vendor/budoux/budoux.esm.js";
+      const parser = loadDefaultJapaneseParser(),
+            htmlProcessor = new HTMLProcessor(parser),
+            tags = ['p', 'li', 'h2'];
+      for (const tag of tags) {
+        for (const el of document.getElementsByTagName(tag)) {
+          htmlProcessor.applyToElement(el);
+        }
+      }
+    </script>
   </body>
 </html>

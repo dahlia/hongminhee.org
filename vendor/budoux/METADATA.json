@@ -1,0 +1,12 @@
+{
+  "name": "budoux",
+  "version": "0.8.1",
+  "source": "https://cdn.jsdelivr.net/npm/budoux@0.8.1/+esm",
+  "upstream": "https://github.com/google/budoux",
+  "license": "Apache-2.0",
+  "license_file": "LICENSE",
+  "vendored_at": "2026-04-20",
+  "vendored_by": "curl from jsDelivr bundled ESM",
+  "integrity": "sha256-Ke8tzYGx8fmQU6hGJxE+cw8Zx4vbkUHTqEsUixqI2qk=",
+  "notes": "Bundled ESM with all CJK + Thai models. Byte-identical mirror of the /+esm response (sourceMappingURL line preserved; dereferencing it from this origin yields a harmless 404). SHA-256 matches jsDelivr's own hash convention for static package files (see https://data.jsdelivr.com/v1/packages/npm/budoux@0.8.1?structure=flat)."
+}
